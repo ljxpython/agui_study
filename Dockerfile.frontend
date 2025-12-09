@@ -2,7 +2,8 @@
 FROM node:20-bookworm-slim AS deps
 WORKDIR /app
 COPY package*.json ./
-RUN npm ci --ignore-scripts
+# 如果有 lock 使用 npm ci，否则回退 npm install
+RUN if [ -f package-lock.json ]; then npm ci --ignore-scripts; else npm install --ignore-scripts; fi
 
 FROM node:20-bookworm-slim AS builder
 WORKDIR /app
