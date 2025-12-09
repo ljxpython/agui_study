@@ -1,9 +1,12 @@
 {
-  "python_version": "3.12",
+  "$schema": "https://langgra.ph/schema.json",
+  "python_version": "3.13",
   "dockerfile_lines": [],
   "dependencies": ["."],
   "graphs": {
     "sample_agent": "./agent.py:graph"
   },
-  "env": ".env"
+  "env": ".env",
+  "image_distro": "wolfi",
+  "pip_installer": "uv"
 }
