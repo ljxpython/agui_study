@@ -1,0 +1,31 @@
+[project]
+name = "server-api-ui-demo1"
+version = "0.1.0"
+description = "Route 1 exploration: LangGraph Server API for ui_demo1"
+requires-python = ">=3.13"
+dependencies = [
+  "python-dotenv>=1.2.1",
+  "fastapi>=0.115.0",
+  "uvicorn>=0.34.0",
+
+  "langchain>=1.0.7",
+  "langchain-community>=0.4.1",
+  "langchain-openai>=1.0.3",
+  "langchain-mcp-adapters>=0.1.13",
+
+  "langgraph>=1.0.2",
+  "langgraph-checkpoint-sqlite>=3.0.0",
+  "langgraph-cli[inmem]>=0.4.7",
+
+  "loguru>=0.7.3",
+]
+
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src"
