@@ -47,7 +47,6 @@ function SheetPortal({
     />
   );
 }
-// FIXME
 
 function SheetOverlay({
   className,

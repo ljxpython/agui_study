@@ -1,6 +1,5 @@
 import type { Base64ContentBlock } from "@langchain/core/messages";
 import { toast } from "sonner";
-// TODO
 
 // 定义期望的图片格式类型
 export interface ImageUrlContentBlock {
@@ -21,11 +20,9 @@ export interface FileContentBlock {
   data: string;
   metadata: { filename: string };
 }
-// FIXME
 
-// 联合类型
+// 唯合类型
 export type OptimizedContentBlock = ImageUrlContentBlock | FileContentBlock;
-// NOTE
 
 // Returns a Promise of a typed multimodal block for images or PDFs
 export async function fileToContentBlock(

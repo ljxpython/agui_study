@@ -67,9 +67,8 @@ function parseAnthropicStreamedToolCalls(
         type: "tool_call" as const,
       };
     })
-    .filter((tc) => tc.name && tc.name.trim() !== ""); // Filter out empty names
-}
-// FIXME
+      .filter((tc) => tc.name && tc.name.trim() !== ""); // Filter out empty names
+  );
 
 interface InterruptProps {
   interruptValue?: unknown;
@@ -244,4 +243,3 @@ export function AssistantMessageLoading() {
     </div>
   );
 }
-// FIXME
