@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect, ChangeEvent } from "react";
 import { toast } from "sonner";
 import { fileToContentBlock, type OptimizedContentBlock } from "@/lib/multimodal-utils";
-// FIXME
 
 export const SUPPORTED_FILE_TYPES = [
   "image/jpeg",
@@ -10,7 +9,6 @@ export const SUPPORTED_FILE_TYPES = [
   "image/webp",
   "application/pdf",
 ];
-// FIXME
 
 interface UseFileUploadOptions {
   initialBlocks?: OptimizedContentBlock[];

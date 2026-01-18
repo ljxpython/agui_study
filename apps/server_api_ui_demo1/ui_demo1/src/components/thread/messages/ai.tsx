@@ -67,6 +67,16 @@ function parseAnthropicStreamedToolCalls(
         type: "tool_call" as const,
       };
     })
+    .filter((tc) => tc.name && tc.name.trim() !== "") as AIMessage["tool_calls"];
+}
+      }
+      return {
+        name: toolCall.name ?? "",
+        id: toolCall.id ?? "",
+        args: json,
+        type: "tool_call" as const,
+      };
+    })
       .filter((tc) => tc.name && tc.name.trim() !== ""); // Filter out empty names
   );
 
